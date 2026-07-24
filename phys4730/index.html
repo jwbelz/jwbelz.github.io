@@ -1,1 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 4730: Computational Physics I</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #0078d7;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 1rem;
+        }
+        .content {
+            flex: 2;
+        }
+        .sidebar {
+            flex: 1;
+            text-align: center;
+        }
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #0078d7;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Physics 4730: Computational Physics I</h1>
+        <p>Professor John Belz | Fall Semester 2025</p>
+    </header>
+    <nav>
+        <a href="information.pdf">Information and Syllabus</a>
+        <a href="http://www.physics.utah.edu/">Physics Home</a>
+        <a href="mailto:belz@physics.utah.edu">Contact Instructor</a>
+    </nav>
+    <main>
+      <section class="content">
+	
+            <section class="materials">
+                <h2>Supplemental Materials</h2>
+                <ul>
+
+</li><li> <a href="https://phoenixnap.com/kb/linux-commands">Linux command line tutorial</a>
+  
+</li><li> <a href="http://python.org/">www.python.org</a>
+  
+</li><li> <a href="https://matplotlib.org/stable">Matplotlib Documentation</a>
+  
+</li><li> EMACS <a href="xemacs-refcard-a4.pdf">reference card</a> and <a href="emcheat.pdf">cheat sheet</a>
+ 
+</li><li> <a href="W3262_F25.pdf">LSSB W3262 Weekly Calendar</a>
+ 
+</li><li> <a href="4730_ai_policy.pdf">Course A.I. policy</a>
+ 
+                </ul>
+
+            </section>
+	    
+            <section class="lectures">
+                <h2>Lectures and Labs</h2>
+                <ol>
+
+ <li> August 18; Course Introduction <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab01/lecture01_slides.pdf">Lecture Slides</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab01/lab01.html">Lab 01</a> <br>
+	 <a href="https://web.physics.utah.edu/~belz/phys4730/lab01/2024_welsh_medium.pdf">The End of Programming</a> by M. Welsh 
+    <br>
+    <br>
+
+    </li><li> August 20; Python Review <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab02/overview.ipynb">Notebook: Python Overview</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab02/lab02.html">Lab 02</a>
+    <br>
+    <br>
+
+    </li><li> August 25; Linear Algebra, Pseudoinverse <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab03/lecture03_notes.pdf">Lecture Notes</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab03/vandermonde.ipynb">Notebook: Vandermonde Matrix</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab03/pseudoinverse.ipynb">Notebook: Pseudoinverse</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab03/1978_james_math-gazette.pdf">M. James, <i>The Generalized Inverse</i> (1978)</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab03/lab03.html">Lab 03</a>
+
+    <br>
+    <br>
+  
+    </li><li> Aug 27; Random Variables<br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab04/lecture04_notes.pdf">Lecture Notes</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab04/rv_gallery.ipynb">Notebook: Random Variable Gallery</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab04/lab04.html">Lab 04</a>
+
+    <br>
+    <br>
+  
+    </li><li> Sep 03; Basic RV Distributions: Binomial, Poisson, Gaussian <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab05/lecture05_slides.pdf">Lecture Slides</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab05/lab05.html">Lab 05</a>
+
+    <br>
+    <br>
+  
+    </li><li> Sep 08; Error Propagation, Covariance<br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab06/lecture06.pdf">Lecture Slides</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab06/lab06.html">Lab 06</a>
+
+    <br>
+    <br>
+  
+    </li><li> Sep 10; Parameter Estimation: Method of Moments<br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab07/lecture07_notes.pdf">Lecture Notes</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab07/central_limit.ipynb">Notebook: The Central Limit Theorem</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab07/lab07.html">Lab 07</a>
+	 
+    <br>
+    <br>
+
+    </li><li> Sep 15; Parameter Estimation: χ<sup>2</sup> Minimization <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab08/lecture08_slides.pdf">Lecture Slides</a> <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab08/lab08.html">Lab 08</a>
+      
+    <br>
+    <br>
+
+    </li><li> Sep 17; Parameter Estimation: Maximum Likelihood I <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab09/lab09_notes.pdf">Lecture Notes</a> <br>
+	 <a href="https://web.physics.utah.edu/~belz/phys4730/lab09/lab09.html">Lab 09</a>
+
+    <br>
+    <br>
+
+    </li><li> Sep 22; Maximum Likelihood II <br>
+         <a href="https://web.physics.utah.edu/~belz/phys4730/lab10/lab10.html">Lab 10</a>
+
+    <br>	 
+    <br>
+
+    <LI> Sep 24; &chi;<sup>2</sup> Minimization II: Goodness of Fit<br>
+      <A HREF="lab11/lecture11_slides.pdf">Lecture Slides</A> <br>
+      Recommended <A HREF="lab11/silver.png">light reading</A> on statistical inference <br>
+      <A HREF="lab11/lab11.html">Lab 11</A>
+
+    <br> 
+    <br>
+  
+    <LI> Sep 29; Fisher Information<br>
+      <A HREF="lab12/lecture12_notes.pdf">Lecture Notes</A> <br>
+      <A HREF="lab12/2017_ly_1705.01064.pdf">A. Ly et al., <i>A Tutorial on Fisher Information</i> (2017)</A> <br>
+      <A HREF="lab12/lab12.html">Lab 12</A>
+
+    <br>
+    <br>
+  
+    <LI> Oct 01; Confidence Intervals<br>
+      <A HREF="lab13/CI_Basics.ipynb">Notebook: CI Basics</A><br>
+      <A HREF="lab13/lab13.html">Lab 13</A><br>
+      <A HREF="lab13/xkcd_significant.png">Statistical inference humor</A>
+
+    <br>  
+    <br>
+      
+<!--
+      
+    <LI> Oct 03; Games of Chance <br>
+      <A HREF="lab14/lecture14_slides.pdf">Lecture Slides</A><br>
+      <A HREF="lab14/blackjack.ipynb">Notebook: Games of Chance</A><br>
+      <A HREF="lab14/lab14.html">Lab 14</A>
+
+    <br> 
+    <br>
+
+-->
+      
+    <LI> Oct 13; Empirical Maximum Likelihood I<br>
+      <A HREF="4730_ai_policy.pdf">Course A.I. policy</A> <br>
+      <A HREF="lab14/bins.pdf">Note on optimal histogram binning</A> <br>
+      <A HREF="lab14/taucut.ipynb">Notebook: likelihood fit with time cutoff</A> <br>
+      <A HREF="lab14/lecture14_notes.pdf">Lecture Notes</A> <br>
+      <A HREF="lab14/MELE_example.ipynb">Notebook: MELE Example</A><br>
+      <A HREF="lab14/lab14.html">Lab 14</A>
+
+    <br>  
+    <br>
+
+    <LI> Oct 15; Empirical Maximum Likelihood II<br>
+      <A HREF="lab15/lecture15_notes.pdf">Lecture Notes</A> <br>
+      <A HREF="lab15/lecture15_slides.pdf">Lecture Slides</A> <br>
+      <A HREF="lab15/Owen-EmpiricalLikelihoodRatio-1988.pdf">Art Owen, &ldquo;Empirical Likelihood Ratio Confidence Intervals for a Single Functional&rdquo; (1988)</A> <br>
+      <A HREF="lab15/2001_owen_Emp-Like-Ch2.pdf">Art Owen, <i>Empirical Likelihood</i>, Chapter 2</A> <br>
+      <A HREF="lab15/1994_qin_ann-stat.pdf">Qin and Lawless, Annals of Statistics (1994)</A> <br>
+      <A HREF="lab15/lab15.html">Lab 15</A>
+
+    <br>
+    <br>
+
+    <LI> Oct 20; Comparing Distributions: KS Test<br>
+      <A HREF="lab16/lecture16_slides.pdf">Lecture Slides</A> <br>
+      <A HREF="lab16/1951_massey_jasa.pdf">Supplemental reading</A>, F.J. Massey review article (1951)<br>
+      <A HREF="lab16/KS_test_etc.ipynb">Notebook: Kolmogorov Smirnov test</A><br>
+      <A HREF="lab16/lab16.html">Lab 16</A> <br>
+
+      <br>
+
+    <LI> Oct 22; Comparing 2D Distributions <br>
+      <A HREF="lab17/lecture17_slides.pdf">Lecture Slides</A> <br>
+      <A HREF="lab17/2dks_note.pdf">Summary of p-value calculation</A> <br>
+      <A HREF="lab17/lab17.html">Lab 17 </A> <br>
+
+      <br>
+
+    <LI> Oct 27; Comparing Distributions with Unknown Parameters<br>
+      <A HREF="lab18/1967_lilliefors_jasa.pdf">H.W. Lilliefors, <i>On the KS Test for Normality with Mean and Variance Unknown</i> (1967) </A> <br>
+      <A HREF="lab18/lab18.html">Lab 18</A> <br>
+
+      <br>
+
+    <LI> Oct 29; Final Project Assignment <br>
+      <A HREF="project/lecture19_slides.pdf">Lecture Slides</A> <br>
+      <A HREF="project/project.html">Final Project</A> <br>
+      
+      <br>
+      
+    <LI> Nov 03; Bayes' Theorem <br>
+      <A HREF="lab20/lecture20_slides.pdf">Lecture Slides</A> <br>
+      <A HREF="lab20/lab20.html">Lab 20</A> <br>
+
+      <br>
+      
+    <LI> Nov 05; Introduction to Machine Learning <br>
+      <A HREF="lab21/lecture21_slides.pdf">Lecture Slides </A> <br>
+      <A HREF="lab21/gini.ipynb">Starter notebook for lab </A><br>
+      <A HREF="lab21/lab21.html">Lab 21</A> <br>
+
+    <br>
+
+    <LI> Nov 10; Decision Trees <br>
+      <A HREF="lab22/lecture22_slides.pdf">Lecture Slides</A> <br>
+      <A HREF="lab22/trees.ipynb">Notebook: Decision Trees with scikit-learn</A><br>
+      <A HREF="lab22/lab22.html">Lab 22</A> <br>
+
+    <br>
+
+    <LI> Nov 12; Dealing with Real Data, Nearest Neighbor Algorithm<br>
+      <A HREF="lab23/lecture23_slides.pdf">Lecture Slides</A> <br>
+      <A HREF="lab23/1967_cover_ieeetrans.pdf">Cover and Hart, <i>Nearest Neighbor Pattern Classification</i> (1967)</A> <br>
+      <A HREF="lab23/20240321_hwc_full.csv">Full Habitable Worlds Catalog (March 2023)</A><br>
+      <A HREF="lab23/real_hwc.ipynb">Notebook: DTs applied to full HWC</A><br>
+      <A HREF="lab23/kNN_sk.ipynb">Notebook: kNN Algorithm with scikit-learn</A><br>
+      <A HREF="lab23/lab23.html">Lab 23</A> <br>
+
+    <br>
+
+    <LI> Nov 17; Diagnostics and Evaluation of Supervised Learning <br>
+      <A HREF="lab24/lecture24_slides.pdf">Lecture Slides</A> <br>
+      <A HREF="lab24/diagnostics.ipynb">Notebook: Supervised Learning Diagnostics</A> <br>
+      <A HREF="lab24/lab24.html">Lab 24</A> <br>
+
+    <br>
+
+    <LI> Nov 19; Neural Network Basics<br>
+      <A HREF="lab25/lecture25_slides.pdf">Lecture Slides</A> <br>
+      <A HREF="lab25/neuron.ipynb">Notebook: Single-Neuron Network</A> <br>
+      <A HREF="lab25/neuronz.ipynb">Notebook: Three-Neuron Network</A> <br>
+      <A HREF="lab25/lab25.html">Lab 25</A> <br>
+
+    <br>
+
+    <LI> Nov 24; Simulating Datasets: Metropolis-Hastings Algorithm <br>
+      <A HREF="lab26/lecture26_slides.pdf">Lecture Slides</A> <br>
+      <A HREF="lab26/mypi.ipynb">Notebook: mypi.ipynb </A> <br>
+      <A HREF="lab26/metropolis.ipynb">Notebook: metropolis.ipynb </A> <br>
+      <A HREF="lab26/lab26.html">Lab 26</A> <br>
+
+    <br>
+
+    <LI> Nov 26; Modeling Magnetism with Metropolis-Hastings: The Ising Model <br>
+      <A HREF="lab27/lecture27_slides.odp">Lecture Slides (odp)</A> <br>
+      <A HREF="lab27/lecture27_slides.pdf">Lecture Slides (pdf)</A> <br>
+      <A HREF="lab27/ising.ipynb">Notebook: ising.ipynb </A> <br>
+      <A HREF="lab27/lab27.html">Lab 27</A> <br>
+
+    <br>
+
+    <LI> Nov 27; Happy Thanksgiving! <br>
+
+    <br>
+
+    <LI> Dec 01; Final Project Help<br>
+
+    <br>
+
+    <LI> Dec 03; Final Project Help<br>
+		  
+    <br>
+
+<!--
+      
+-->
+                </ol>
+            </section>
+	    
+            <section class="homework">
+                <h2>Homework Assignments</h2>
+                <ol>
+		  
+    <li> <a href="https://web.physics.utah.edu/~belz/phys4730/hw01/hw01.pdf">Homework 1</a>; 
+
+      <ul>
+	<li> <a href="https://web.physics.utah.edu/~belz/phys4730/hw01/cosines.dat">cosines.dat</a> <br>
+	</li><li> <a href="https://web.physics.utah.edu/~belz/phys4730/hw01/polyfile.dat">polyfile.dat</a> <br>
+      </li></ul>
+
+      <br>
+
+    </li><li> <a href="https://web.physics.utah.edu/~belz/phys4730/hw02/hw02.pdf">Homework 2</a>;  <br>
+
+      <ul>
+	<li> <a href="https://web.physics.utah.edu/~belz/phys4730/hw02/muons20051130.dat">muons20051130.dat</a> <br>
+      </li></ul>
+      
+    <br>
+
+    <LI> <A HREF="hw03/hw03.pdf">Homework 3</A>;  <br>
+      
+    <br>  
+
+    <LI> <A HREF="hw04/hw04.pdf">Homework 4</A>
+      <UL>
+	<LI> <A HREF="hw04/rvvec.dat">rvvec.dat</A> (problem 1) <br>
+	<LI> <A HREF="hw04/quantile.pdf">Hint</A> for problem 1<br>
+	<LI> <A HREF="hw04/1988_press_CiP.pdf">Press and Teukolsky (1988)</A> (problem 2) <br>
+	<LI> <A HREF="hw04/ptdata.squares.dat">P &amp; T &ldquo;squares&rdquo; data set</A> (problem 2) <br>
+ 	<LI> <A HREF="hw04/ptdata.triangles.dat">P &amp; T &ldquo;triangles&rdquo; data set</A> (problem 2) <br>
+     </UL>
+
+    <br>
+
+    <LI> <A HREF="hw05/hw05.pdf">Homework 5</A>;
+      <UL>
+	<LI> <A HREF="hw05/redblue.dat">redblue.dat</A> (problem 1) <br>
+	<LI> <A HREF="hw05/20240321_hwc_full.csv">full HWC dataset </A> (problem 2)  
+	<LI> <A HREF="hw05/1967_cover_ieeetrans.pdf">Cover & Hart, <i>NN Pattern Classification</i> (1967)</A> <br>
+     </UL>
+
+<!--
+<font color="#ff0000"> Due by 11:59 PM on Sunday, November 23 </font> <br>      <br>
+      <br>
+
+-->
+
+
+                </ol>
+		
+            </section>
+	    
+            <section class="solutions">
+                <a href="solutions/solutions.html"><h2>Lab and Homework Solutions</h2></a>
+            </section>
+
+            <section class="final">
+              <h2> Final Project </h2>
+
+<!--
+	      <font color="#ff0000"> Due by 11:59 PM on Sunday, December 7 </font> <br>
+
+-->
+
+<ul>
+
+<LI> <A HREF="project/lecture19_slides.pdf">Slides</A> <br>
+<LI> <A HREF="project/project.html">Assignment</A> <br>
+
+<!--
+-->
+
+</ul>
+
+           </section>
+	    
+        </section>
+        <aside class="sidebar">
+            <img src="eniac2.gif">
+            <h3>ENIAC</h3>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; Physics 4730 at University of Utah</p>
+    </footer>
+</body>
+</html>
 
