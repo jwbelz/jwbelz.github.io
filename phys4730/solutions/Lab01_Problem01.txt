@@ -1,0 +1,15 @@
+(a) What was the highlight of your summer break?
+
+I took a couple of nice trips to South America, where I hiked the Inca Trail in 
+Peru and did some August skiing in Chile. 
+
+(b) Please describe your previous computing experience. List any prior programming 
+courses that you have taken. List any programming languages and operating systems 
+with which you are familiar.
+
+I have been teaching computational physics in various forms since 2006, and was a 
+leader in creating the Computational Physics Emphasis at the University of Utah. 
+I have also made broad use of computers in my research, including the study of 
+particle and astroparticle physics data and the simulation of extreme spacetimes 
+and black hole formation. I perform most of my work on the Linux operating system 
+and use languages including Python, C++, FORTRAN and Sage. 
