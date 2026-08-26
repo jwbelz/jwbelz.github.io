@@ -1,0 +1,91 @@
+<html>
+
+  <head>
+    <title>PHYSICS 4730</title>
+  </head>
+
+<BODY TEXT=black BGCOLOR="#FFFFFF" STYLE="font-family:Arial;width:1000px;margin-left:100px;"  LINK=blue VLINK=darkblue>
+
+<br>PHYSICS 4730 <br>
+Lab 03<br>
+</h3>
+
+    <p>
+
+      <UL>
+	<li> <a href="#exercises"> Exercises </a> 
+	<li> <a href="#assignment"> Assignment </a>
+      </UL>
+      
+    </p>
+
+<hr>
+
+<a name="exercises">
+
+<h4>
+Exercise 1.
+</h4>
+
+<p>
+
+Please review the <A HREF="vandermonde.ipynb">Vandermonde Matrix</A> and <A HREF="pseudoinverse.ipynb">Pseudoinverse</A> notebooks that the instructor discussed in lecture.
+
+</p>
+
+<h4>
+Exercise 2.
+</h4>
+
+<p>
+
+  Prepare a standalone Python script <b>findquadratic.py</b> to perform the following:
+  <ul>
+    <li> Read data from <A HREF="quaddata.dat">quaddata.dat</A> , assumed to be in the current working directory. <br> <br>
+    <li> Suppose a model predicts this data should be described by a quadratic polynomial, <i>i.e.</i>
+      <br><br>
+      <b>y(x) = a<sub>0</sub> + a<sub>1</sub>x + a<sub>2</sub>x<sup>2</sup> </b>
+      <br><br>
+      Set up the appropriate Vandermonde matrix, invert it using <b>numpy.linalg.pinv</b>, and find the solution vector <b>a = (a<sub>0</sub>,a<sub>1</sub>,a<sub>2</sub>)</b>. <br> <br>
+    <li> For output, print the values of the solution vector <b>a</b> to standard output.  Also, produce a plot of the data with superimposed quadratic fit. Save this plot in the file <b>findquadratic.png</b>.  
+  </ul>
+  Your code should run on the Physics Department Linux Cluster, with the command <b>python3 findquadratic.py</b>.
+  
+</p>
+
+<hr>
+
+<a name="assignment">
+
+<p>
+</p>
+<h4>
+<font color="#ff0000"> Assignment, due 1 September 2026 <i>in class</i> </font>
+</h4>
+
+<h4>
+Problem 1 
+</h4>
+
+<p>
+Submit the code <b>findquadratic.py</b> and it's output  <b>findquadratic.png</b> from Exercise 2 above. 
+</p>
+
+<pre>
+submit p4730 lab03 findquadratic.py findquadratic.png
+</pre> 
+
+<br>
+<br>
+
+<hr>
+
+<br>
+<br>
+<A HREF="http://jwbelz.github.io/phys4730/index.html">  Back to main Physics 4730 page</A> 
+<br>
+<br>
+<br>
+<br>
+
+</body></html>
