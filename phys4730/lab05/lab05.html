@@ -1,1 +1,167 @@
+<html>
+
+  <head>
+    <title>PHYSICS 4730</title>
+  </head>
+
+<BODY TEXT=black BGCOLOR="#FFFFFF" STYLE="font-family:Arial;width:1000px;margin-left:100px;"  LINK=blue VLINK=darkblue>
+
+
+<h3> 
+<br>PHYSICS 4730 <br>
+Lab 05<br>
+</h3>
+
+<p>
+<a href="#exercises">Exercises</a> 
+<br>
+<a href="#assignment">Assignment</a> 
+</p>
+
+<a name="exercises">
+
+<p>
+  In this lab, we will be making use of (pseudo) random number generators in Python. Have a look at <a href="https://docs.python.org/3/library/random.html" target="_blank">this link</a> on the <b>random</b> library package and its various options, which will be of use for the exercises and assignments below. 
+</p>
+
+<hr>
+
+<h4>
+<a name="ex1">
+Exercise 1.
+</h4>
+
+<p>
+Start by using a random number generator to simulate the flip of an unbiased coin. Try to find the probability of getting <i>exactly</i> the same number of heads and tails in a sequence of 10 coin flips. This code snippet might be useful:
+</p>
+<pre>
+import random
+
+def headsortails():
+    return random.choice(['H','T'])
+
+nflips = 10       # number of coin flips to simulate
+ntries = 1000000  # number of times to simulate the flipping of nflips coins
+
+nheadstails = 0   # a counter, number of times nheads = ntails
+
+for i in range(0,ntries):
+
+    nheads = 0
+    ntails = 0
+
+    for j in range(0,nflips):
+
+        result = headsortails()
+        if(result == 'H'):
+            nheads += 1
+        else:
+            ntails += 1
+
+    if(nheads == ntails): nheadstails += 1
+
+prob = float(nheadstails)/float(ntries)
+</pre>
+<p>
+Print the results of this calculation to standard output (i.e. the terminal). Can you also calculate and print out the expected error of this result, based on the in-class discussion? 
+</p>
+
+<hr>
+
+<p>
+</p><h4>
+<a name="ex2">
+Exercise 2.
+</h4>
+<p>
+Now, let's compare the result of Exercise 1 with the theoretical prediction based on the binomial distribution. This function definition should do the trick:
+</p>
+<pre> 
+def binomial_pdf(p,n,k):
+
+#   calculates the binomial probability of obtaining exactly k occurrences
+#   of some event (whose likelihood is p) in n independent trials. 
+    
+    return factorial(n)/(factorial(k)*factorial(n-k))*pow(p,k)*pow(1.0-p,n-k)
+</pre> 
+
+<p>
+  (Note that this function in turn calls a function named <b>factorial</b>. Perhaps you already wrote this function when you were learning Python. Or you could just use the factorial function from the Python <b>math</b> library.) 
+</p>
+
+<p>
+Here, n is the number of coin flips, p is the likelihood of a certain outcome &mdash; say the coin landing on heads, so p=0.5 &mdash; and k is a certain number of occurrences of that outcome. The function returns the probability of getting exactly k occurrences of some event (like coin landing on heads) in n trials (coin flips), given that in each trial the likelihood of getting that event is p (for a fair coin, p=0.5). So, to find the chance of getting exactly 4 heads in 12 coin flips, use
+<pre>     
+p = 0.5
+n = 12
+k = 4
+binomialProbability = binomial_pdf(p,n,k)
+</pre>
+If you've done things correctly, the binomial probability should agree with the random coin flip experiment of Exercise 1, within statistical uncertainty. 
+</p>
+
+<hr>
+
+<p>
+</p><h4>
+<a name="ex3">
+Exercise 3.
+</h4>
+<p>
+If the number of trials n becomes large, the standard form for the binomial distribution can become problematic due to machine limitations on computing factorials for very large numbers. Instead, one can use a Gaussian approximation to get an estimate:
+</p>
+
+<pre> 
+def binomial_pdf_approx(p,n,k):
+
+#   calculates the gaussian approximation to a binomial
+#   probability of getting exactly k occurrences of some
+#   event (whose likelihood is p) in n independent trials.
+
+    x = k-n*p 
+    var = n*p*(1-p) 
+
+    return np.exp(-x*x/(2.*var))/np.sqrt(2*np.pi*var) 
+</pre> 
+
+<p>
+Use this, for example, to estimate the probability of obtaining exactly 50 heads in 100 coin tosses. 
+</p>
+
+<p>
+Experiment, and and see how well the approximate formula agrees with the exact binomial calculation for different values of n and k. 
+</p>
+
+<a name="assignment">
+
+<br>
+<hr>
+
+<h4>
+<font color="#ff0000"> Assignment 05 </font>
+</h4>
+
+<!--
+<h4>
+<font color="#ff0000"> Assignment 05, due 05 September 2023 <i>in class</i> </font>
+</h4>
+-->
+
+There is no assignment to be turned in today. If you complete the exercises above, please take a look at <A HREF="http://jwbelz.github.io/phys4730/hw01/hw01.pdf">Homework 01</A> (if you haven't already!) and discuss any questions with the instructor.  
+
+<br>
+<br>
+
+<hr>
+
+<br>
+<br>
+
+<A HREF="http://jwbelz.github.io/phys4730/index.html">  Back to main Physics 4730 page</A> 
+<br>
+<br>
+<br>
+<br>
+
+</p></body></html>
 
