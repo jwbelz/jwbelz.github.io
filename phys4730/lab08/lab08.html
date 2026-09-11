@@ -1,0 +1,138 @@
+
+<html>
+
+  <head>
+    <title>PHYSICS 4730</title>
+  </head>
+
+<BODY TEXT=black BGCOLOR="#FFFFFF" STYLE="font-family:Arial;width:1000px;margin-left:100px;"  LINK=blue VLINK=darkblue>
+
+<h3> 
+<br>PHYSICS 4730<br>
+Lab 08<br>
+</h3>
+
+
+<p>
+<a href="#exercises">Exercises</a> 
+<br>
+<a href="#assignment">Assignment</a> 
+</p>
+
+<a name="exercises">
+
+<hr>
+<p>
+For an excellent review of fitting, please see Chapter 15 of <a href="000_numerical_recipes_3rd_ed.pdf">Numerical Recipes</a>. The FORTRAN and C versions of this book are available for free download over the internet. I highly recommend it!
+<p>
+
+<p>
+</p><h4>
+<a name="ex1">
+Exercise 1.
+</h4>
+
+<p>
+For starters, lets have a quick look at fitting in Numpy. Prepare a text file called &ldquo;pts.dat&rdquo; with three columns of text data, as follows:
+<pre>
+  # x     y   sigy
+  1.0   6.6   1.0
+  2.0   7.2   1.0
+  3.0   9.5   1.0
+  4.0  12.9   1.0
+</pre> 
+(I just made these numbers up.) Have a look at the Matplotlib example <a href="https://matplotlib.org/1.2.1/examples/pylab_examples/errorbar_demo.html" target="_blank">errorbar_demo.py</a>. Use this to create a Python script to read in data from pts.dat and plot the points with the sigy column as errorbars. Be sure to use the <b>fmt='o'</b> option or Matplotlib will also do a connect-the-dots with your points. 
+</p>
+
+<p>
+Its easy enough to superimpose a straight line on this graph. For example,
+<pre>
+  plt.errorbar(x, y, yerr=0.4, fmt='o')
+
+  a = 4.0
+  b = 1.0
+  straightline = a + b*x
+  plt.plot(x,straightline)
+  
+  plt.show()
+</pre>
+Try varying <b>a</b> and <b>b</b> to see if, by trial-and-error, you can obtain a reasonable &ldquo;fit&rdquo; (one that passes through all the errorbars) to these points.
+</p>
+
+<p>
+Now, let Numpy have a shot at it. The simplest thing is to remember that a line is a polynomial of order 1, and use the <b>numpy.polyfit</b> function:
+<pre>
+  z = np.polyfit(x, y, 1)
+  b = z[0]
+  a = z[1]
+  straightline = a + b*x
+  plt.plot(x,straightline)
+</pre>
+Compare the values of <b>a</b> and <b>b</b> to your trial-and-error guesses.
+</p>
+
+<img SRC="lab08_polyfit.png" BORDER=0 width=512>
+
+<p>
+Note however that while <b>numpy.polyfit</b> is very easy to use, it lacks some desirable features. For one thing, it assumes that the errorbars on all points are the same size. For another, it does not provide any information on the quality of the fit itself. 
+</p>
+
+<p>
+<hr>
+<p>
+
+<p>
+<h4>
+<a name="ex2">
+Exercise 2.
+</h4>
+
+<p>
+Now, we will create a dataset and fit it to a curve using the more powerful <b>scipy.optimize.curve_fit</b> function, and also use the result to quantify the quality of the fit. 
+</p>
+
+<p>
+  Download and execute the notebook <a href="fitacurve.ipynb">fitacurve.ipynb</a>. This notebook starts by illustrating how to generate an artificial data set with Gaussian-distributed errors. The data may be thought of as representing the number of nuclear decays in uniform time intervals, as measured in the vicinity of a radioactive source. 
+</p>
+
+<p>
+Now, following the hints given in the notebook, extract fit parameters and goodness of fit as follows:
+</p>
+
+<ul>
+  
+<li> Declare a set of starting guesses for the fit parameters. <br> <br>
+
+<li> Pass the fit function, data (with uncertainties) and starting guesses to <b>scipy.optimize.curve_fit</b>. Record the optimized fit parameters and covariance matrix which the function returns. <br> <br>
+
+<li> Compute &chi;<sup>2</sup> using the optimized parameters, and the number of degrees of freedom N<sub>df</sub>. <br> <br>
+
+<li> Pass the &chi;<sup>2</sup> and  N<sub>df</sub> to <b>scipy.special.gammaincc</b> to determine the quality factor. <br> <br>
+
+<li> Plot the data with your final fit result, and print the numbers. <br>
+
+</ul>
+
+<a name="assignment">
+
+<br>
+<hr>
+
+<h4>
+<font color="#ff0000"> There is no lab assignment due today. The exercises above will be directly applicable to Exercise 3 in  <a href="https://web.physics.utah.edu/~belz/phys4730/hw02/hw02.pdf">Homework 02</a></font>.
+</h4>
+
+<hr>
+
+<br>
+<br>
+
+<A HREF="http://jwbelz.github.io/phys4730/index.html">  Back to main Physics 4730 page</A> 
+
+<br>
+<br>
+<br>
+<br>
+
+</p></body></html>
+
