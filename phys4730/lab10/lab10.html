@@ -1,0 +1,102 @@
+<html>
+
+  <head>
+    <title>PHYSICS 4730</title>
+  </head>
+
+<BODY TEXT=black BGCOLOR="#FFFFFF" STYLE="font-family:Arial;width:1000px;margin-left:100px;"  LINK=blue VLINK=darkblue>
+
+<br>PHYSICS 4730 <br>
+Lab 10<br>
+</h3>
+
+    <p>
+
+      <UL>
+	<li> <a href="#exercises"> Exercises </a> 
+	<li> <a href="#assignment"> Assignment </a>
+      </UL>
+      
+    </p>
+
+<hr>
+
+<a name="exercises">
+
+<h4>
+Exercise 1.
+</h4>
+
+<p>
+
+   Please read and execute the prepared <A HREF="MLE_exponential.ipynb">notebook</A>, which illustrates parameter estimation by the Maximum Likelihood method.
+ 
+</p>
+    
+<h4>
+Exercise 2.
+</h4>
+
+<p>
+
+  Now, consider the <i>Poisson Distribution</i> <br> <br>
+  
+ <img SRC="poisson.png" BORDER=0 width=200> <br> <br>
+ 
+  where <i>x</i> is a nonnegative integer.
+  
+</p>
+
+  <ol>
+    
+    <li> In <A HREF="../lab09/lab09.html">Lab09</A> we derived expresssions for  likelihood L, log-likelihood log(L), and the MLE for &lambda;. Please review the solutions if you weren't able to complete this exercise. <br> <br>
+      
+    <li> Now, take 1,000 random variables from the Poisson pdf, with &lambda;=2.3, using <b>numpy.random.poisson</b>. Plot these in a histogram. You may need to play with the binning a bit to get something that looks reasonable. Why?<br> <br>
+
+    <li> Following the exponential example, use the MLE procedure to find the parameter &lambda;. Compare this to the analytical expectation and it's uncertainty. (Note: <b>numpy.factorial </b> won't work for this... try it!... you'll want to use <b>from scipy.special import factorial</b> instead.) <br> <br>
+      
+    <li> Repeat steps 2 and 3 many times, at least 100. <br> <br> 
+
+    <li> Plot the MLE results on a histogram, and compare with &ldquo;ground truth&rdquo;. Also compare the width of the results with expectation. 
+
+  </ol>
+  
+</p>
+
+<hr>
+
+<a name="assignment">
+
+<h4>
+<font color="#ff0000"> Assignment, due 24 September 2026 <i>in class</i> </font>
+</h4>
+
+<h4>
+Problem 1 
+</h4>
+
+<p>
+Submit your notebook <b>MLE_poisson.ipynb</b> from Exercise 2 above. 
+</p>
+
+<pre>
+submit p4730 lab10 MLE_poisson.ipynb
+</pre> 
+
+<br>
+
+<!--
+  
+-->
+
+<hr>
+
+<br>
+<br>
+<A HREF="http://jwbelz.github.io/phys4730/index.html">  Back to main Physics 4730 page</A> 
+<br>
+<br>
+<br>
+<br>
+
+</body></html>
