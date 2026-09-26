@@ -1,0 +1,124 @@
+<html>
+
+  <head>
+    <title>PHYSICS 4730</title>
+  </head>
+
+<BODY TEXT=black BGCOLOR="#D3D3D3" STYLE="font-family:Arial;width:1000px;margin-left:100px;"  LINK=blue VLINK=darkblue>
+
+<br>PHYSICS 4730 <br>
+Lab 11<br>
+</h3>
+
+    <p>
+
+      <UL>
+	<li> <a href="#exercises"> Exercises </a> 
+	<li> <a href="#assignment"> Assignment </a>
+      </UL>
+      
+    </p>
+
+<hr>
+
+<a name="exercises">
+
+<h4>
+Exercise 1.
+</h4>
+
+<p>
+In a jupyter notebook named <b>chisquared.ipynb</b>, write some python code to confirm an assertion made in lecture: Suppose I draw a set of N random variables {x<sub>i</sub>} from a normal (Gaussian) distribution with mean &mu; and width &sigma;. If I define &xi; as the weighted sum-of-squares deviation from the mean: 
+</p>
+
+<img SRC="xidef.png" BORDER=0 width=200> <br> 
+
+<p>
+Then &xi; will follow a &chi;<sup>2</sup> distribution with k = N degrees of freedom. 
+</p>
+
+<img SRC="chidist.png" BORDER=0 width=500> <br> 
+
+<p>
+&Gamma; represents the gamma function, but it is easier to generate the  &chi;<sup>2</sup> PDF directly using <b>scipy.stats.chi2</b>. 
+</p>
+
+<p>
+For starters, have your code do the following
+</p>
+
+  <ol>
+    
+    <li> Set k = N = 10 data points, &mu; = 2.0 and &sigma; = 1.0. (But note that the &chi;<sup>2</sup> distribution doesn't depend on &mu; and &sigma;!) <br> <br>
+      
+    <li>  Perform 1,000 (or so) trials in which you sample N RVs {x<sub>i</sub>} using <b>numpy.random.normal</b>. Calculate &xi; for each trial. <br> <br>
+
+    <li> Plot the &xi; values in a histogram, using the <b>density=True</b> option. <br> <br>
+      
+    <li> Now, use <b>scipy.stats.chi2(k)</b> to superimpose the appropriate &chi;<sup>2</sup> PDF on your &ldquo;data&rdquo; to confirm they agree. 
+
+  </ol>
+  
+<p>
+Here are a few other things to try. 
+</p>
+  <ul>
+    
+    <li> Vary &mu; = 2.0 and &sigma; = 1.0, confirm they have no impact on the &chi;<sup>2</sup> distribution. <br> <br>
+
+    <li> Vary N, confirm that the assertion still holds.  <br> <br>
+      
+    <li> Suppose that, instead of taking &mu; as fixed, we determine &mu; by taking the mean of the data points. Since we have determined &mu; from the data, the number of degrees of freedom drops to k = N - 1. Recompute and plot the distribution of Q and confirm that <b>scipy.stats.chi2(N-1)</b> now describes the data.  <br> <br>
+
+  </ul>
+
+<h4>
+Exercise 2.
+</h4>
+
+<p>
+As a check of your understanding of the <b>scipy.special.gammaincc</b> function, reproduce the plot below of Goodness-of-Fit vs &chi;<sup>2</sup> for various numbers of degrees of freedom. 
+</p>
+
+<img SRC="goodness.png" BORDER=0 width=400> <br> 
+
+<hr>
+
+<a name="assignment">
+
+<!--
+<h4>
+There are no required submissions for today. 
+</h4>
+-->
+
+<h4>
+<font color="#ff0000"> Assignment, due 24 September 2024 <i>in class</i> </font>
+</h4>
+
+<h4>
+Problem 1 
+</h4>
+
+<p>
+Submit Exercises 1 and 2 above in a single Jupyter Notebook <b>chisquared.ipynb</b>.
+</p>
+
+<pre>
+submit p4730 lab11 chisquared.ipynb
+</pre> 
+
+<br>
+
+
+<hr>
+
+<br>
+<br>
+<A HREF="http://jwbelz.github.io/phys4730/index.html">  Back to main Physics 4730 page</A> 
+<br>
+<br>
+<br>
+<br>
+
+</body></html>
