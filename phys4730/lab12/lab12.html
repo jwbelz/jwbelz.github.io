@@ -1,0 +1,116 @@
+<html>
+
+  <head>
+    <title>PHYSICS 4730</title>
+  </head>
+
+<BODY TEXT=black BGCOLOR="#FFFFFF" STYLE="font-family:Arial;width:1000px;margin-left:100px;"  LINK=blue VLINK=darkblue>
+
+<br>PHYSICS 4730 <br>
+Lab 12<br>
+</h3>
+
+    <p>
+
+      <UL>
+	<li> <a href="#exercises"> Exercises </a> 
+	<li> <a href="#assignment"> Assignment </a>
+      </UL>
+      
+    </p>
+
+<hr>
+
+<a name="exercises">
+
+<h4>
+Exercise 1.
+</h4>
+
+<p>
+
+Today's lab is a simple plotting exercise, designed to reinforce the idea of <i>Fisher Information</i>. You will calculate and plot the Fisher information for two normal PDFs
+
+</p>
+
+<img SRC="twonormal.png" BORDER=0 width=400> <br> 
+
+<p>
+We will take the widths of these distributions &mdash; &sigma;<sub>1</sub> and &sigma;<sub>2</sub> &mdash; to be known, and compute Fisher information for the parameters &theta;<sub>1</sub> and &theta;<sub>2</sub>.
+</p>
+
+<p>
+  Consider cases in which f<sub>1</sub> and f<sub>2</sub> have the different means and the same width, e.g. <br> <br>
+  &nbsp; &nbsp; &theta;<sub>1</sub>, &sigma;<sub>1</sub> = 1.0, 0.3 <br>
+  &nbsp; &nbsp; &theta;<sub>2</sub>, &sigma;<sub>2</sub> = 2.0, 0.3 <br> <br>
+and also the case where f<sub>1</sub> and f<sub>2</sub> have the same means and different widths, e.g. <br> <br>
+  &nbsp; &nbsp; &theta;<sub>1</sub>, &sigma;<sub>1</sub> = 2.0, 0.3 <br>
+  &nbsp; &nbsp; &theta;<sub>2</sub>, &sigma;<sub>2</sub> = 2.0, 0.6 <br>
+</p>
+
+<p>
+
+Create a Python script (or Jupyter Notebook) to perform the following:
+
+</p>
+
+  <ol>
+    
+    <li> Generate an appropriately-sized (i.e. readable) 5-panel plot. The horizontal axis should span -10.0 < x < 10.0, in small steps. <br> <br>
+      
+    <li> The five panels should be: <br> <br>
+      <ul>
+	<li> Overlay of the two PDFs
+	<li> Overlay of ln(PDF)
+	<li> Overlay of ln(PDF)' (derivative w.r.t. &theta;)
+	<li> Overlay of (ln(PDF)')<sup>2</sup>
+	<li> Overlay of the integrand needed to calculate I(&theta;) 
+      </ul> <br>
+
+    <li> Your code should do a numerical integration of the integrands in panel 5, and output Fisher information for the two PDFs. <br> <br>
+      
+    <li> Can you relate the Fisher information to the values of the parameters (&theta;<sub>i</sub>, &sigma;<sub>i</sub>)? Does the behavior of the Fisher Information with changes in &theta;<sub>i</sub> and &sigma;<sub>i</sub> agree with your intuitive understanding of information? <br> <br>
+
+    <li> Finally, your code should produce an output figure <b>fisher.png</b>. 
+
+  </ol>
+  
+</p>
+
+<hr>
+
+<a name="assignment">
+
+<h4>
+<font color="#ff0000"> Assignment, due 1 October 2026 <i>in class</i> </font>
+</h4>
+
+<h4>
+Problem 1 
+</h4>
+
+<p>
+Submit your plot <b>fisher.png</b> from Exercise 1 above. 
+</p>
+
+<pre>
+submit p4730 lab12 fisher.png
+</pre> 
+
+<br>
+
+<!--
+  
+-->
+
+<hr>
+
+<br>
+<br>
+<A HREF="http://jwbelz.github.io/phys4730/index.html">  Back to main Physics 4730 page</A> 
+<br>
+<br>
+<br>
+<br>
+
+</body></html>
