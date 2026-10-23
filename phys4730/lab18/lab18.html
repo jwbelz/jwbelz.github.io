@@ -1,0 +1,127 @@
+<html>
+
+  <head>
+    <title>PHYSICS 4730</title>
+  </head>
+
+<BODY TEXT=black BGCOLOR="#FFFFFF" STYLE="font-family:Arial;width:1000px;margin-left:100px;"  LINK=blue VLINK=darkblue>
+
+<br>PHYSICS 4730 <br>
+Lab 18<br>
+</h3>
+
+    <p>
+
+      <UL>
+	<li> <a href="#exercises"> Exercises </a> 
+	<li> <a href="#assignment"> Assignment </a>
+      </UL>
+      
+    </p>
+
+<hr>
+
+<a name="exercises">
+
+<h4>
+Exercise 1.
+</h4>
+
+<p>
+This lab was originally created by Prof. Michael Vershinin.
+</p>
+
+<p>
+The Kolmogorov-Smirnov (KS) test is designed to test data against a known distribution or two independent data sets against each other, as we saw in <A HREF="../lab16/lab16.html">Lab 16</A>. But it is <b>not</b> valid to estimate parameters for the distribution of interest from data and then apply the KS test against the distribution with estimated parameters. For example, you should not take data that looks like it comes from a Gaussian distribution, estimate location and width, and then perform a KS test between the data and the Gaussian distribution with the estimated parameters.
+</p>
+
+<p>
+But, if we are clever we can create our own KS-like statistic for such a scenario and evaluate the significances using a Monte Carlo technique. Following <A HREF="1967_lilliefors_jasa.pdf">Lilliefors</A>, let’s carry out this procedure for a normal distribution with estimated parameters.
+</p>
+
+<ol>
+  <li> Write a function to compute Lilliefors' statistic for normal distribution. The function should take one input: the number of data points N<sub>pts</sub> in the dataset, and output a single number: 
+    <br><br>
+    
+    <ol type="a">
+      
+      <li> Generate an independent normal data set of size = N<sub>pts</sub>. You can use any mean and width you want.
+
+	<br><br>
+
+      <li> Estimate the mean and standard deviation from the data set. Be careful to use the Bessel correction for standard deviation (you can use <b>numpy.std</b> but with <b>ddof=1</b>).
+
+	<br><br>
+	
+      <li> Form a normalized data set by subtracting mean and dividing by standard deviation.
+
+	<br><br>
+
+      <li> Compute ECDF and theoretical CDF. Make sure ECDF starts at zero and ends in 1. I suggest sorting the data into 1,000 or so small bins between -10 &sigma; and +10 &sigma;.
+
+	<br><br>
+
+      <li> Compute the absolute value of the maximum vertical deviation or <i>supremum</i> between ECDF and CDF.  
+
+	<br><br>
+
+      <li> Return the supremum as our test statistic.
+
+	<br><br>
+	
+    </ol>
+
+  <li> Now, in your main script call this function to compute the Lilliefors statistic for many (10,000 or more) data sets of sample size N<sub>pts</sub>. Apply <b>np.quantile</b> to the resultant distribution to find critical values of the test statistic, corresponding to significances and null-hypothesis confidence intervals. <br> <br>
+
+For N<sub>pts</sub> = 12, output a set of numbers that can be compared against the corresponding row in Table 1 of <A HREF="1967_lilliefors_jasa.pdf">Lilliefors</A>.
+
+</ol>
+
+<br>
+
+<hr>
+
+<a name="assignment">
+
+<!--
+<h4>
+There are no required submissions for today. 
+</h4>
+
+<h4>
+<font color="#ff0000"> Assignment, due 29 October 2026 <i>in class</i> </font>
+</h4>
+-->
+
+<h4>
+<font color="#ff0000"> Optional assignment for extra credit only, if you have no remaining questions on  <A HREF="../hw04/hw04.pdf">Homework 4</A>: </i> </font>
+</h4>
+
+<h4>
+Problem 1 
+</h4>
+
+<p>
+Complete Exercise 1 above in a Jupyter Notebook <b>lilliefors.ipynb</b>.
+</p>
+
+<pre>
+submit p4730 lab18 lilliefors.ipynb
+</pre> 
+<!--
+-->
+
+<br>
+
+
+<hr>
+
+<br>
+<br>
+<A HREF="http://jwbelz.github.io/phys4730/index.html">  Back to main Physics 4730 page</A> 
+<br>
+<br>
+<br>
+<br>
+
+</body></html>
