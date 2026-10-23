@@ -1,0 +1,110 @@
+<html>
+
+  <head>
+    <title>PHYSICS 4730</title>
+  </head>
+
+<BODY TEXT=black BGCOLOR="#FFFFFF" STYLE="font-family:Arial;width:1000px;margin-left:100px;"  LINK=blue VLINK=darkblue>
+
+<br>PHYSICS 4730 <br>
+Lab 17<br>
+</h3>
+
+    <p>
+
+      <UL>
+	<li> <a href="#exercises"> Exercises </a> 
+	<li> <a href="#assignment"> Assignment </a>
+      </UL>
+      
+    </p>
+
+<hr>
+
+<a name="exercises">
+
+<h4>
+Exercise 1.
+</h4>
+
+<p>
+In this lab, we reproduce the calculation carried out in <A HREF="1988_press_CiP.pdf">Press and Teukolsky (1988).</A> The calculation will be directly applicable to Problem 2 of  <A HREF="../hw04/hw04.pdf">Homework #4</A>. We will be applying a Kolmogorov-Smirnov-type analysis to a 2D RV distribution, although the CDF for a 2D distribution is not well-defined. 
+</p>
+
+<ol>
+  <li> Create a Jupyter Notebook <b>press.ipynb</b> for this calculation. <br><br>
+
+  <li> Start by reading in the 2D data contained in <A HREF="1988_press_CiP.pdf">Press and Teukolsky</A> Figure 1, from the files <A HREF="ptdata.squares.dat">ptdata.squares.dat</A> and <A HREF="ptdata.triangles.dat">ptdata.triangles.dat</A>. (These data were taken directly from Figure 1 by the instructor.) It would be a good idea to make a scatter plot of both datasets, to compare with Press and Teukolsky's figure.<br><br>
+
+  <img SRC="ptdata.png" BORDER=0 width=400> 
+
+  <br><br>
+
+  <li> Create a function <b>quadct</b> to return the normalized fraction in each quadrant. This will be nothing more than a Python version of Press and Teukolsky's <b>SUBROUTINE QUADCT</b> (originally in FORTRAN). <br><br>
+    
+  <li> Create a function <b>QKS</b> to compute KS probability (Equation 3 of Press and Teukolsky). You obviously can't count an infinite number of terms, so you'll need to pick a cutoff for <i>j</i>. Start by choosing <i>j<sub>max</sub> = 10</i>, later test if your results change when you vary this. <br><br>
+    
+  <li> Create a function <b>ks2d2s</b> which calls <b>quadct</b> and <b>QKS</b>, to generate the 2D KS statistic and chance probability. <br><br>
+
+  <li> Lastly, your main script should call <b>ks2d2s</b>, with the x- and y-values of the two RVs (four arrays of numbers in all). <br><br>
+
+  <li> As a last step, print out your results in the format
+       <!--
+       <pre>
+       The 2D KS statistic is: 0.40402 
+       The probability is:     0.00544 
+       </pre>
+       -->
+       <pre>
+       The 2D KS statistic is: x.xxxxx 
+       The probability is:     x.xxxxx 
+       </pre>
+       and compare your results with those of <A HREF="1988_press_CiP.pdf">Press and Teukolsky.</A> If your agreement is reasonable, you may proceed to <A HREF="../hw04/hw04.pdf">Homework #4</A> with confidence. <br><br>
+
+</ol>
+
+<br>
+
+<hr>
+
+<a name="assignment">
+
+  <h4>
+  <font color="#ff0000">
+  There are no required submissions for today. Code created will be
+  directly applicable to <A HREF="../hw04/hw04.pdf">Homework #4</A>.
+  </font>
+</h4>
+
+<!--
+<h4>
+<font color="#ff0000"> Assignment, due 11:59 PM, 31 October 2023 </font>
+</h4>
+
+<h4>
+Problem 1 
+</h4>
+
+<p>
+Submit Exercise 1 above in a Jupyter Notebook <b>press.ipynb</b>.
+</p>
+
+<pre>
+submit p4730 lab19 press.ipynb
+</pre> 
+
+<br>
+
+-->
+
+<hr>
+
+<br>
+<br>
+<A HREF="http://jwbelz.github.io/phys4730/index.html">  Back to main Physics 4730 page</A> 
+<br>
+<br>
+<br>
+<br>
+
+</body></html>
