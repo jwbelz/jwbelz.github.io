@@ -1,0 +1,118 @@
+<html>
+
+  <head>
+    <title>PHYSICS 4730</title>
+  </head>
+
+<BODY TEXT=black BGCOLOR="#FFFFFF" STYLE="font-family:Arial;width:1000px;margin-left:100px;"  LINK=blue VLINK=darkblue>
+
+<br>PHYSICS 4730 <br>
+Lab 24<br>
+</h3>
+
+    <p>
+
+      <UL>
+	<li> <a href="#exercises"> Exercises </a> 
+	<li> <a href="#assignment"> Assignment </a>
+      </UL>
+      
+    </p>
+
+<hr>
+
+<a name="exercises">
+
+<h4>
+Exercise 1.
+</h4>
+
+<p>
+  In lecture, the instructor introduced the notebook <A HREF="diagnostics.ipynb">diagnostics.ipynb</A> as a survey of diagnostic tools in supervised learning. The notebook applied the technique of <b>k-fold cross validation</b> to the decision tree classifier of the full <A HREF="20240321_hwc_full.csv">Habitable Worlds Catalog</A> data set. 
+</p>
+
+<p>
+Starting with this notebook, experiment with the following:
+</p>
+
+<ul>
+
+<li> In addition to the 5-fold cross validation try varying <i>k</i> from 5 to 10. Note any differences.<br> 
+
+<br>
+  
+<li>  For the 5-fold case, try the alternative &ldquo;shuffled&rdquo; and  &ldquo;stratified&rdquo; cross-validation schemes. <br>
+  <pre>
+  cv2 = KFold(shuffle = True, n_splits = 5, random_state=5)
+  cv3 = StratifiedKFold(shuffle = True, n_splits = 5, random_state=5)</pre>
+  
+Again, note differences in the scores and learning curves. <br>
+
+</ul>
+
+Finally, in a markdown cell at the end of your notebook, please answer the following questions:
+
+<ul>
+
+<li> If the accuracy score is 100%, what will be the precision and recall scores? <br>
+
+<br>
+  
+<li>  What is the effect of shuffling and stratification on the k-fold splits? <br>
+
+<br>  
+
+<li>  Within the particular k-fold schemes, are the differences in scores statistically significant for any of the splits? Explain. <br>
+
+<br>  
+
+<li> Does the confusion matrix depend on the cross-validation scheme chosen? Why or why not? <br>
+
+<br>  
+
+<li> Do the learning curves exhibit any significant differences for the three cross-validation schemes? <br>
+
+<br>  
+
+</ul>
+
+<hr>
+
+<a name="assignment">
+
+<!--
+
+  <h4>
+  <font color="#ff0000">
+  There are no required submissions for today. Any code created will be
+  applicable to <A HREF="../hw05/hw05.pdf">Homework #5</A>.
+  </font>
+</h4>
+
+-->
+
+<h4>
+<font color="#ff0000"> Assignment, due 19 November 2026 <i>in class</i> </font>
+</h4>
+
+<p>
+Submit your results from the above in a single Jupyter Notebook.
+</p>
+
+<pre>
+submit p4730 lab24 diagnostics.ipynb
+</pre> 
+
+<br>
+
+<hr>
+
+<br>
+<br>
+<A HREF="http://jwbelz.github.io/phys4730/index.html">  Back to main Physics 4730 page</A> 
+<br>
+<br>
+<br>
+<br>
+
+</body></html>
