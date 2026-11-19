@@ -1,1 +1,127 @@
+<html>
+
+  <head>
+    <title>PHYSICS 4730</title>
+  </head>
+
+<BODY TEXT=black BGCOLOR="#FFFFFF" STYLE="font-family:Arial;width:1000px;margin-left:100px;"  LINK=blue VLINK=darkblue>
+
+<br>PHYSICS 4730 <br>
+Lab 25<br>
+</h3>
+
+    <p>
+
+      <UL>
+	<li> <a href="#exercises"> Exercises </a> 
+	<li> <a href="#assignment"> Assignment </a>
+      </UL>
+      
+    </p>
+
+<hr>
+
+<a name="exercises">
+
+<h4>
+Exercise 1.
+</h4>
+
+<p>
+  In lecture, the instructor introduced the notebook <A HREF="neuron.ipynb">neuron.ipynb</A> as an illustration of the performance of a single neuron. Suppose that, instead of using an exact training set (X,y) we are given a set of points with uncertainties, for example:
+</p>
+
+<pre>
+   X          y
+--------------------  
+ 0.50   2.48 +- 1.00
+ 1.00   0.92 +- 1.00
+ 1.50   4.92 +- 1.00
+ 2.00   5.17 +- 1.00
+ 2.50   5.17 +- 1.00
+ 3.00   5.78 +- 1.00
+ 3.50   7.75 +- 1.00
+ 4.00   8.14 +- 1.00
+ 4.50   9.35 +- 1.00
+ 5.00  11.76 +- 1.00
+ 5.50  11.45 +- 1.00
+ 6.00  13.59 +- 1.00
+ 6.50  12.01 +- 1.00
+ 7.00  14.03 +- 1.00
+ 7.50  17.58 +- 1.00
+ 8.00  15.88 +- 1.00
+ 8.50  18.44 +- 1.00
+ 9.00  19.20 +- 1.00
+</pre>
+
+<p>
+Create a notebook <b>neuron_fit.ipynb</b> in which you fit these points to a straight line using a single neuron. Plot the points along with a superposition of the result of your straight line fit. For comparison, also fit the points to a straight line using <b>np.polyfit(X, y, 1)</b>. Please comment in your notebook: Is the polyfit result any better than the neuron fit? 
+</p>
+
+<td></td>
+
+<h4> 
+Exercise 2.
+</h4>
+
+<p>
+  In lecture, the instructor introduced the notebook <A HREF="neuronz.ipynb">neuronz.ipynb</A>. Conduct your own experiments with this notebook, to see if you can get a feel for the interplay between the hidden neurons' activation functions and the desired output. Some things to try:
+</p>
+
+<ul>
+
+  <li> There's nothing magical about the <b>tanh</b> function; the activation function just has to be nonlinear. Can you find other activation functions that produce a better representation of  <b>sin(x)</b>?
+
+    <br><br>
+
+  <li> Or, work it the other way. Can you find training functions other than <b>sin(x)</b> that this network will better reproduce?
+
+    <br><br>
+
+  <li> BONUS CHALLENGE: Figure out the indexing changes needed to add a third neuron to the hidden layer. Does this improve your output at all? 
+
+    <br><br>
+
+</ul>
+
+<hr>
+
+<a name="assignment">
+
+<!--
+
+  <h4>
+  <font color="#ff0000">
+  There are no required submissions for today. Any code created will be
+  applicable to <A HREF="../hw05/hw05.pdf">Homework #5</A>.
+  </font>
+</h4>
+
+-->
+
+<h4>
+<font color="#ff0000"> Assignment, due 24 November 2026 <i>in class</i> </font>
+</h4>
+
+<p>
+Submit your results from Exercise 1 above in a Jupyter Notebook.
+</p>
+
+<pre>
+submit p4730 lab25 neuron_fit.ipynb
+</pre> 
+
+<br>
+
+<hr>
+
+<br>
+<br>
+<A HREF="http://jwbelz.github.io/phys4730/index.html">  Back to main Physics 4730 page</A> 
+<br>
+<br>
+<br>
+<br>
+
+</body></html>
 
