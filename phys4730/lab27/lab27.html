@@ -64,14 +64,17 @@ mynn   = my_NN(layers)
 	  <pre>
 optimizer = torch.optim.SGD(mynn.parameters(), lr=0.01)
       </pre>
-	Try varying the number of layers and the number of neurons per layer. The first and last element of the <pre style="display: inline;">layers</pre><pre> array should be 1, but you can have more than
+	Try varying the number of layers and the number of neurons per layer. The first and last element of the <pre style="display: inline;">layers</pre> array should be 1, but you can have more than
     one hidden layer and (many) more than 2 neurons per hidden layer. What size of neural network is required to find a reasonable sine wave? What if you increase the number of
 	periods of the output to greater than 2? 																									   
 <br>
 <br>
   
-  <li> blah
-
+  <li> Explore how the learning rate <pre style="display: inline;">lr</pre> impacts the convergence of the learning. 
+	  If I want to increase the rate of convergence, should <pre style="display: inline;">lr</pre> be smaller or larger? 
+	  Do you understand why? Is there a range of values for <pre style="display: inline;">lr</pre> beyond which the 
+	  training becomes unstable? 
+ 
 <br>
 <br>
   
