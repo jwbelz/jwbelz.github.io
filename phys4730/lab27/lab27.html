@@ -59,13 +59,13 @@ Do the following:
 layers = [1, 2, 1]       
 mynn   = my_NN(layers)
 	  </pre>
-	blah blah blah is the same as that used in <A HREF="../lab25/neuronz.ipynb">neuronz.ipynb</A>. See page 10 of the <A HREF="../lab25/lecture25_slides.pdf>Lecture 25 slides</A>.
+	is the same as that used in <A HREF="../lab25/neuronz.ipynb">neuronz.ipynb</A>. See page 10 of the <A HREF="../lab25/lecture25_slides.pdf">Lecture 25 slides</A>.
 	It also makes use of the basic gradient descent for backpropagation, with a learning rate of 0.01. 
 	  <pre>
 optimizer = torch.optim.SGD(mynn.parameters(), lr=0.01)
       </pre>
-	Try varying the number of layers and the number of neurons per layer. The first and last element of the <b>layers</b> array should be 1, but you can have more than
-    one hidden layer and (many) more than 2 neurons per hidden layer. What neural network is required to find a reasonable sine wave? What if you increase the number of
+	Try varying the number of layers and the number of neurons per layer. The first and last element of the <pre>layers</pre> array should be 1, but you can have more than
+    one hidden layer and (many) more than 2 neurons per hidden layer. What size of neural network is required to find a reasonable sine wave? What if you increase the number of
 	periods of the output to greater than 2? 																									   
 <br>
 <br>
