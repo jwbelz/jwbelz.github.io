@@ -40,8 +40,8 @@ In <A HREF="../lab25/lab25.html">Lab 25</A> we covered some of the basic compone
 </p>
 
 <p>
-Read through <A HREF="sinusoid.ipynb">sinusoid.ipynb</A> with the instructor. Compare output to the original <A HREF="../lab25/neuronz.ipynb">neuronz.ipynb</A> 
-	code from <A HREF="../lab25/lab25.html">Lab 25</A>. 
+Read through <A HREF="sinusoid.ipynb">sinusoid.ipynb</A> with the instructor. Compare output to the original 
+	<A HREF="../lab25/neuronz.ipynb">neuronz.ipynb</A> code from <A HREF="../lab25/lab25.html">Lab 25</A>. 
 </p>
 
 <h4>
@@ -49,30 +49,26 @@ Exercise 1.
 </h4>
 
 <p>
-Do the following:
+Make modifications to the code to obtain answers to the following questions. Provide your answers to the questions in a markdown cell at the bottom of the notebook. 
 </p>
 
-<ul>
+<ol>
 
-  <li> The neural network created in <A HREF="sinusoid.ipynb">sinusoid.ipynb</A> <br>
-	  <pre>
-layers = [1, 2, 1]       
-mynn   = my_NN(layers)
-	  </pre>
-	is the same as that used in <A HREF="../lab25/neuronz.ipynb">neuronz.ipynb</A>. See page 10 of the <A HREF="../lab25/lecture25_slides.pdf">Lecture 25 slides</A>.
-	It also makes use of the basic gradient descent for backpropagation, with a learning rate of 0.01. <br> 
-	  <pre>
-optimizer = torch.optim.SGD(mynn.parameters(), lr=0.01)
-      </pre>
-	Try varying the number of layers and the number of neurons per layer. The first and last element of the <pre style="display: inline;">layers</pre> array should be 1, but you can have more than
-    one hidden layer and (many) more than 2 neurons per hidden layer. What size of neural network is required to find a reasonable sine wave? What if you increase the number of
-	periods of the output to greater than 2? 																									   
+  <li> What is a minimal set of 
+	  <ul>
+		  <li> adding layers to the network </li>
+		  <li> adding neurons to the hidden layers </li>
+	  </ul>
+	  by which we can obtain a network capable of being trained to output a credible $$y = sin(x)$$? Judging by eye is fine. 
+	  (The first and last element of the <pre style="display: inline;">layers</pre> 
+	  array should be 1, but you can add additional hidden layers and (many) more than 2 neurons per hidden layer.)
+	  
 <br>
 <br>
   
-  <li> Explore how the learning rate <pre style="display: inline;">lr</pre> impacts the convergence of the learning. 
-	  If I want to increase the rate of convergence, should <pre style="display: inline;">lr</pre> be smaller or larger? 
-	  Do you understand why? Is there a range of values for <pre style="display: inline;">lr</pre> beyond which the 
+  <li> Describe how the learning rate <pre style="display: inline;">lr</pre> impacts the convergence of the learning. 
+	  If I want to increase the rate of convergence, should the learning rate <pre style="display: inline;">lr</pre> 
+	  be smaller or larger? Why? Is there a range of values for <pre style="display: inline;">lr</pre> beyond which the 
 	  training becomes unstable? 
  
 <br>
@@ -88,8 +84,14 @@ steep and bigger steps where slopes are gentle). Can you see any quantitative di
 
 <br>
 <br>
-  
-</ul>
+
+	  <li> Finally, add a plot to the notebook. Using the network you have trained to produce a sine wave between -2&pi; and +2&pi; 
+		  plot the output of that network for -4&pi; &lt; x &lt; +4&pi;. Is the result what you expect? Explain. 
+	  
+<br>
+<br>
+	  
+</ol>
 
 <hr>
 
