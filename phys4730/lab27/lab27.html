@@ -59,34 +59,35 @@ Make modifications to the code to obtain answers to the following questions. Pro
 		  <li> adding layers to the network </li>
 		  <li> adding neurons to the hidden layers </li>
 	  </ul>
-	  by which we can obtain a network capable of being trained to output a credible <i>y = sin(x)</i>>? Judging &ldquo;credibility&rdquo;
-	  by eye is fine. (The first and last element of the <p style-:color:red;"><pre style="display: inline;">layers</pre></p> 
+	  by which we can obtain a network capable of being trained to output a credible <i>y = sin(x)</i>? Judging &ldquo;credibility&rdquo;
+	  by eye is fine. (The first and last element of the <pre style="display: inline;">layers</pre>
 	  array should be 1, but you can add additional hidden layers and (many) more than 2 neurons per hidden layer.)
 	<p style="color: blue;">This text is blue.</p>  
 <br>
 <br>
   
   <li> Describe how the learning rate <pre style="display: inline;">lr</pre> impacts the convergence of the learning. 
-	  If I want to increase the rate of convergence, should the learning rate <pre style="display: inline;">lr</pre> 
+	  If I want to increase the rate of convergence, should <pre style="display: inline;">lr</pre> 
 	  be smaller or larger? Why? Is there a range of values for <pre style="display: inline;">lr</pre> beyond which the 
 	  training becomes unstable? 
  
 <br>
 <br>
   
-  <li> PyTorch also allows for more sophisticated backpropagation algorithms than SGD. For example, the <b>Adam</b> optimizer<br> 
+  <li> PyTorch also allows for more sophisticated backpropagation algorithms than SGD. For example, 
+	  the <b>Adam</b> optimizer<br> (see <A HREF="2015_kingma_iclr.pdf">Kingma</A>, <A HREF="2024_hospodarskyy_citi.pdf">Hospodarskyy</A>) 
 	  <pre>
 optimizer = torch.optim.Adam(mynn.parameters(), lr=0.01)
       </pre>
-adds two &ldquo;helpers&rdquo; to SGD to make the walk smoother and better scaled: it remembers recent directions (so noisy steps 
-average out and progress builds along steady slopes) and adjusts step size per weight (taking smaller steps where slopes are 
+adds two &ldquo;helpers&rdquo; to SGD to make the walk smoother and better scaled: (1) it remembers recent directions (so noisy steps 
+average out and progress builds along steady slopes) and (2) adjusts step size per weight, taking smaller steps where slopes are 
 steep and bigger steps where slopes are gentle). Can you see any quantitative difference between the <b>SGD</b> and <b>Adam</b> outputs?	
 
 <br>
 <br>
 
-	  <li> Finally, add a plot to the notebook. Using the network you have trained to produce a sine wave between -2&pi; and +2&pi; 
-		  plot the output of that network for -4&pi; &lt; x &lt; +4&pi;. Is the result what you expect? Explain. 
+	  <li> Finally, add a plot to the notebook. Using the network you have trained to produce a sine wave between <br>
+		  -2&pi; &lt; x &lt; +2&pi; plot the output of that network for -4&pi; &lt; x &lt; +4&pi;. Is the result what you expect? Explain. 
 	  
 <br>
 <br>
