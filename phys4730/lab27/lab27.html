@@ -84,7 +84,7 @@ optimizer = torch.optim.Adam(mynn.parameters(), lr=0.01)
       </pre>
 adds two &ldquo;helpers&rdquo; to SGD to make the walk smoother and better scaled: it remembers recent directions (so noisy steps 
 average out and progress builds along steady slopes) and adjusts step size per weight (taking smaller steps where slopes are 
-	  steep/jumpy and bigger steps where slopes are gentle/steady). Can you see any quantitative difference between <b>SGD</b> and <b>Adam</b>?	
+steep and bigger steps where slopes are gentle). Can you see any quantitative difference between the <b>SGD</b> and <b>Adam</b> outputs?	
 
 <br>
 <br>
